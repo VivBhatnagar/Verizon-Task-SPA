@@ -17,11 +17,15 @@ export class TimerConfigComponent implements OnInit {
   newEventClick(event) {
     if (event.target.className === 'btn btn-primary' ) {
       if (event.target.innerText === 'Start/Pause') {
-      this.data.changeMessage({limiter: this.timerValue, eventTriggered: event.target.innerText});
-      event.target.innerText =  'Pause';
+        if (!!this.timerValue) {
+          this.data.changeMessage({limiter: this.timerValue, eventTriggered: event.target.innerText});
+          event.target.innerText =  'Pause';
+        }
       } else if (event.target.innerText === 'Start') {
-        this.data.changeMessage({eventTriggered: event.target.innerText});
-        event.target.innerText =  'Pause';
+        if (!!this.timerValue) {
+          this.data.changeMessage({eventTriggered: event.target.innerText});
+          event.target.innerText =  'Pause';
+        }
       } else if (event.target.innerText === 'Pause') {
         this.data.changeMessage({eventTriggered: event.target.innerText});
         event.target.innerText = 'Start';

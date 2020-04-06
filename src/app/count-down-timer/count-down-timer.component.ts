@@ -45,8 +45,8 @@ myFunction() {
       this.limit = this.counter;
     }
     if (this.event === 'Reset') {
-      clearInterval(timerLimit);
       this.limit = 0;
+      clearInterval(timerLimit);
     }
     if (this.limit === 0) {
       document.querySelector('.btn.btn-primary').innerHTML = 'Start/Pause';
