@@ -1,0 +1,35 @@
+      <div class="container">
+        <div class="row">
+            
+      <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" >Verizon</a>
+          </div>
+        <ul class="nav navbar-nav">
+          <li>
+            <a routerLink="/floatingbanner" routerLinkActive="active">Floating Banner</a>
+          </li>
+          <li>
+            <a routerLink="/" routerLinkActive="active">Countdown Timer</a>
+          </li>
+          <li>
+            <a routerLink="/results" data-dataset=data-dataset  routerLinkActive="active">Results</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+      <router-outlet></router-outlet>
+        
+      </div>
+      <!-- 
+      <div class="col-xs-12 col-sm-3">
+        <app-timer (filterForm)="catchFiltersArray($event)"></app-timer>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <app-search (searchTerm)="catchSearchEvent($event)"></app-search>
+        </div>
+      -->

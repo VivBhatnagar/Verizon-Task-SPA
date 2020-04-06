@@ -1,0 +1,7 @@
+<label>Enter Timer Limit :</label>
+<input name="timerValue" type="text" value="{{timerValue}}" [(ngModel)]="timerValue">
+
+<div (click) ="newEventClick($event)" class="timer-actions">
+    <button class="btn btn-primary"  value="">Start/Pause</button>
+    <button class="btn btn-danger" Value="Reset">Reset</button>
+</div>
